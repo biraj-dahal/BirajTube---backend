@@ -10,6 +10,7 @@ app.use(express.json());
 app.post("/process-video", async (req, res) => {
   let data;
 
+  // boiler plate code
   try{
     const message = Buffer.from(req.body.message.data, 'base64').toString('utf8');
     data = JSON.parse(message);
